@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/Index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Prism/prism.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <h1>PostMaster</h1>
+            <a href="../HTML/index.html">Home</a>
+        </div>
+        <div>
+            <input type=" text" placeholder="Search Here" id="search">
+            <button id="searchBtn">Search</button>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Welcome to PostMaster</h1>
+        <br>
+        <form action="./index.html">
+            <div>
+                <label for="url">URL</label><input type="text" placeholder="Enter the URL here" id="url">
+            </div>
+            <br>
+            <div>
+                <div>
+                    <label for="">Request Type</label>
+                </div>
+                <div>
+                    <div><input type="radio" name="request" id="get"><label for="get"> &nbsp;GET</label></div>
+                    <div><input type="radio" name="request" id="post"><label for="post"> &nbsp; POST</label></div>
+                </div>
+            </div>
+            <br>
+
+            <div>
+                <div>
+                    <label for="">Content Type</label>
+                </div>
+                <div>
+                    <div><input type="radio" name="content" id="json"><label for="json">&nbsp; JSON</label></div>
+                    <div><input type="radio" name="content" id="custom"><label for="custom">&nbsp; Custom
+                            Parameter</label></div>
+                </div>
+            </div>
+            <br>
+            <div id="jsonRequest">
+                <div><label for="">Enter Request JSON</label></div>
+                <div><textarea name="json" id="jsonContent" cols="60" rows="5"></textarea></div>
+            </div>
+            <br>
+            <div class="customRequest">
+                <div><label for="">Enter Custom Data</label></div>
+                <div id="customContent" class="customContents">
+                    <input name="CustomContentName" placeholder="Enter Custom Name 1" type="text">
+                    <input name="CustomContentData" placeholder="Enter Custom Data 1" type="text">
+                    <input type="button" value="+" id="addBtn">
+                </div>
+            </div>
+
+            <br>
+            <button id="subBtn">Submit</button>
+        </form>
+        <br>
+        <hr>
+    </div>
+    <div id="response">
+        <h4>Response</h4>
+        <div >
+            <pre id="responsePrism" class="language-javascript"><code class="language-javascript">your code will appear Here</code></pre>
+        </div>
+    </div>
+</body>
+<script src="../Js/Index.js"></script>
+<script src="../Prism/prism.js"></script>
+
+</html>
